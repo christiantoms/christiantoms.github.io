@@ -1,0 +1,107 @@
+/*
+Our custom CSS to control the look and feel of the site.
+Select DOM elements based on their name, 
+class (.), or ID (#) and define their styles here.
+*/
+body {
+  font-size: 1.5em;
+  color: #444;
+  font-family: 'Arvo', serif;
+  font-color: #333333;
+}
+
+#top-nav {
+	font-size: 9pt;
+	font-color: #cccccc;
+	margin-top: 10px;
+}
+
+#title-section {
+	border-top: 1px solid black;
+	border-bottom: 2px solid gray;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 20px;
+}
+
+#title {
+	font-weight: 700;
+	font-size: 36pt;
+}
+
+#date {
+	font-size: 14pt;
+}
+
+#categories {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+.category {
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size: 10.5pt;
+	font-style: normal;
+	cursor: pointer;
+}
+
+.selected-category {
+	font-weight: 700;
+}
+
+#article-section {
+	padding-right: 0;
+}
+
+.col-md-3 {
+	padding-left: 0;
+}
+
+.aside-title {
+	padding-top: 10px;
+	font-weight: 700;
+	font-style: italic;
+	font-size: 20pt;
+	line-height: 1;
+}
+
+.aside-snippet {
+	font-size: 12pt;
+}
+
+.aside-separator {
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid black;
+}
+
+.home-main-article-title-first {
+	font-style: italic;
+	font-size: 16pt;
+}
+
+.home-main-article-title {
+	font-style: italic;
+	font-weight: 700;
+	font-size: 16pt;
+}
+
+.home-main-location {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 10pt;
+}
+
+.home-main-snippet {
+	font-size: 10pt;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.content-main-article-title {
+	font-weight: 700;
+	font-size: 16pt;
+}

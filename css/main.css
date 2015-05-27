@@ -45,6 +45,7 @@ body {
 }
 
 .category {
+	font-color: black;
 	padding-left: 25px;
 	padding-right: 25px;
 	font-size: 10.5pt;

@@ -10,6 +10,19 @@ appServices.service("catService", ["$http", function($http) {
 	this.retrieve = function(path) {
 		return $http.get(url + path);
 	};
+
+	this.getCatContent = function(){
+		return $http.get(url + "articles/categories")
+	};
+
+	this.getFilteredCat = function(obj) {
+		var newObj = {};
+		for(var i = 0; i < obj.length; i++) {
+			newObj[obj[i]["shortName"]] = obj[i]["id"];
+		}
+
+		return newObj;
+	}
 	
 	$http.get(url + "articles/categories").success(function(data) {
 		self.catInfo = data;
@@ -19,8 +32,9 @@ appServices.service("catService", ["$http", function($http) {
 			self.catMap[self.catInfo[i]["shortName"]] = self.catInfo[i]["id"];
 		}
 
+		console.log("End of service get");
+
 	}).error(function(data) {
 		console.log("god help us...[catService]");
 	});
 }]);
-

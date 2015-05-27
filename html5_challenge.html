@@ -33,8 +33,8 @@
 					<span id="date"></span>
 				</header>
 				<nav id="categories">
-					<span ng-repeat="category in headings" class="category">
-						<a href="#/{{category.shortName}}">{{category.displayName}}</a>
+					<span ng-repeat="category in catInfo" class="category">
+						<a href="#/{{category.shortName}}" id="{{category.shortName}}">{{category.displayName}}</a>
 					</span>
 				</nav>
 			</div>

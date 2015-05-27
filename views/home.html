@@ -1,0 +1,22 @@
+<div class="col-md-3">
+	<article ng-repeat="article in homeNews.aside">
+		<h3>{{article.headLine}}</h3>
+		<p>{{article.snippet}}</p>
+	</article>
+</div>
+<div class="col-md-5">
+	<article ng-repeat="article in homeNews.main">
+		<h3>{{article.headLine}}</h3>
+		<p>{{article.snippet}}</p>
+	</article>
+</div>
+<div class="col-md-4">
+	<article ng-repeat="article in homeNews.opinion">
+		<h3>{{article.headLine}}</h3>
+		<p>{{article.snippet}}</p>
+	</article>
+	<article ng-repeat="article in homeNews.travel">
+		<h3>{{article.headLine}}</h3>
+		<p>{{article.snippet}}</p>
+	</article>
+</div>

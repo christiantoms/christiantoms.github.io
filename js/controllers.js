@@ -1,19 +1,34 @@
 console.log("inside controllers.js");
 
-var HTMLControllers = angular.module("HTMLControllers", []);
+var HTMLControllers = angular.module("HTMLControllers", ["challengeServices"]);
 
-HTMLControllers.controller("TopCtrl", ["$scope", "$http", function($scope, $http) {
+HTMLControllers.controller("TopCtrl", ["$scope", "catService", function($scope, catService) {
+	//Top level controller so we can handle page setup logic
+	console.log(catService);
+	console.log(Object.keys(catService).length);
+	for(var x in Object.keys(catService)) {
+		console.log(Object.keys(catService)[x]);
+	}
+	//$scope.headings = catService.catInfo;
 
-	$http.get("http://html5news.herokuapp.com/articles/categories").success(function(data) {
-		$scope.catInfo = data;
+}]);
+
+HTMLControllers.controller("HomeCtrl", ["$scope", "catService", function($scope, catService) {
+
+	catService.retrieve("articles/featured").success(function(data) {
+		$scope.homeNews = data; 
 	}).error(function(data) {
-		console.log('god help us. [TOP]');
+		console.log("god help us. [HomeCtrl]");
 	});
 }]);
 
-HTMLControllers.controller("HomeCtrl", ["$scope", "$http", function($scope, $http) {
-
-	$http.get("http://html5news.herokuapp.com/articles/featured").success(function(data) {
-		$scope.homeNews = data;
+HTMLControllers.controller("ContentCtrl", ["$scope", "$routeParams", "catService", function($scope, $routeParams, catService) {
+	console.log("contentctrl begun!");
+	
+	catService.retrieve("category/" + $scope.catMap[$routeParams.shortName]).success(function(data) {
+		$scope.catNews = data;
+		console.log($scope.catMap[$routeParams.shortName] + " <-------- that thing");
+	}).error(function(data){
+		console.log("god help us. [ContentCtrl catagory]");
 	});
 }]);

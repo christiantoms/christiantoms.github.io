@@ -9,10 +9,8 @@ body {
   font-family: 'Arvo', serif;
   font-color: #333333;
   height: 100%;
-  overflow: hidden;
 }
 html {
-	overflow: hidden;
 	min-height:100%;
 	min-width: 100%;
 }
@@ -74,10 +72,7 @@ a {
 
 #banner {
 	padding-top: 5px;
-	height: 80px;
 	background-color: lightgray;
-	margin-bottom: 20px;
-	text-align: middle;
 }
 
 #clickToExpand {
@@ -90,7 +85,6 @@ a {
 }
 
 #banner-content-div {
-	margin-top: -20px;
 	text-align: center;
 	z-index: 1;
 }
@@ -99,6 +93,7 @@ a {
 	font-weight: 700;
 	font-style: italic;
 	font-size: 18pt;
+	vertical-align: middle;
 }
 
 .banner-content {
@@ -107,7 +102,6 @@ a {
 	background-color: lightgray;
 	z-index: 1;
 	opacity: 1;
-	margin-bottom: 100px;
 	position: relative;
 }
 

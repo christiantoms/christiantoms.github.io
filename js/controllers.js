@@ -10,6 +10,11 @@ HTMLControllers.controller("TopCtrl", ["$scope", "catService", function($scope, 
 		console.log($scope.catInfo);
 		$scope.catMap = catService.getFilteredCat($scope.catInfo);
 	});
+
+	catService.getBannerContent().then(function(response){
+			$scope.bannerInfo = response.data;
+	});
+
 }]);
 
 HTMLControllers.controller("HomeCtrl", ["$scope", "catService", function($scope, catService) {

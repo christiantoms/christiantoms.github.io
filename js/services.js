@@ -15,6 +15,10 @@ appServices.service("catService", ["$http", function($http) {
 		return $http.get(url + "articles/categories")
 	};
 
+	this.getBannerContent = function() {
+		return $http.get("http://html5news.herokuapp.com/banners");
+	}
+
 	this.getFilteredCat = function(obj) {
 		var newObj = {};
 		for(var i = 0; i < obj.length; i++) {

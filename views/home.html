@@ -1,13 +1,32 @@
+<script>
+	$('#clickToExpand').on('click', function(e) {
+    e.preventDefault();
+    var $collapse = $(this).closest('.collapse-group').find('.collapse');
+    $collapse.collapse('toggle');
+});
+</script>
+<div id="banner" class="collapse-group">
+	<div id="clickToExpand">
+		<span style="display:inline-block;vertical-align:top;margin-right:5px">Click to expand 
+		</span>
+		<span style="display:inline-block;vertical-align:top;margin-top:-14px"><i class="fa fa-angle-down" style="font-size:50px;font-weight:900"></i>
+		</span>
+	</div>
+	<div id="banner-content-div">
+		<span class="banner-heading">Banner Heading</span>
+		<div class=" banner-content collapse">Some stuff<br>More stuff<br>Even more</div>
+	</div>
+</div>
 <div class="col-md-3">
 	<article ng-repeat="article in homeNews.aside">
-		<h3>{{article.headLine}}</h3>
-		<p>{{article.snippet}}</p>
+		<span class="aside-title">{{article.headLine}}</span>
+		<p class="aside-snippet aside-separator">{{article.snippet}}</p>
 	</article>
 </div>
 <div class="col-md-5">
 	<article ng-repeat="article in homeNews.main">
-		<h3>{{article.headLine}}</h3>
-		<p>{{article.snippet}}</p>
+		<span class="home-main-article-title">{{article.headLine}}</span>
+		<p class="home-main-snippet"><span class="home-main-location">{{article.location}}  </span>{{article.snippet}}</p>
 	</article>
 </div>
 <div class="col-md-4">

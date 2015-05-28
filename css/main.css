@@ -8,6 +8,7 @@ body {
   color: #444;
   font-family: 'Arvo', serif;
   font-color: #333333;
+  z-index: -1000000000;
 }
 
 .container {
@@ -55,6 +56,53 @@ body {
 
 .selected-category {
 	font-weight: 700;
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+#banner {
+	padding-top: 5px;
+	height: 80px;
+	background-color: lightgray;
+	margin-bottom: 20px;
+	text-align: middle;
+}
+
+#clickToExpand {
+	margin-right: 10px;
+	margin-left: 1285px;
+	text-align: right;
+	color: white;
+	cursor: pointer;
+	font-weight: 700;
+}
+
+#banner-content-div {
+	margin-top: -20px;
+	text-align: center;
+	z-index: 1;
+}
+
+.banner-heading {
+	font-weight: 700;
+	font-style: italic;
+	font-size: 18pt;
+}
+
+.banner-content {
+	font-size: 12pt;
+	background-color: lightgray;
+	z-index: 1;
+	opacity: 1;
+	margin-bottom: 100px;
+}
+
+.collapse.in {
+	z-index: 1;
+	opacity: 1;
 }
 
 #article-section {

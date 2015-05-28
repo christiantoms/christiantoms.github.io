@@ -114,8 +114,14 @@ a {
 	line-height: 1;
 }
 
+.aside-location {
+	font-size: 16pt;
+	text-transform: uppercase;
+}
+
 .aside-snippet {
 	font-size: 12pt;
+	margin-top: 5px;
 }
 
 .aside-separator {
@@ -145,6 +151,56 @@ a {
 	font-size: 10pt;
 	padding-bottom: 10px;
 	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+.opinion-title {
+	font-style: italic;
+	font-size: 16pt;
+}
+
+.opinion-article-title-first {
+	font-style: italic;
+	font-size: 12pt;
+}
+
+.opinion-article-title {
+	font-weight: 700;
+	font-style: italic;
+	font-size: 12pt;
+}
+
+.opinion-location {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 10pt;
+}
+
+.opinion-snippet {
+	font-size: 10pt;
+	margin-top: 5px;
+}
+
+.travel-title {
+	font-weight: 700;
+	font-size: 12pt;
+}
+
+.travel-article-title {
+	font-size: 12pt;
+	font-weight: 700;
+	font-style: italic;
+}
+
+.travel-location {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 10pt;
+}
+
+.travel-snippet {
+	font-size: 10pt;
+	margin-top: 5px;
 }
 
 .content-main-article-title {

@@ -20,22 +20,97 @@
 <div class="col-md-3">
 	<article ng-repeat="article in homeNews.aside">
 		<span class="aside-title">{{article.headLine}}</span>
-		<p class="aside-snippet aside-separator">{{article.snippet}}</p>
-	</article>
-</div>
-<div class="col-md-5">
-	<article ng-repeat="article in homeNews.main">
-		<span class="home-main-article-title">{{article.headLine}}</span>
-		<p class="home-main-snippet"><span class="home-main-location">{{article.location}}  </span>{{article.snippet}}</p>
+		<p class="aside-snippet aside-separator"><span class="aside-location">{{article.location}}&nbsp&nbsp</span>{{article.snippet}}</p>
 	</article>
 </div>
 <div class="col-md-4">
-	<article ng-repeat="article in homeNews.opinion">
-		<h3>{{article.headLine}}</h3>
-		<p>{{article.snippet}}</p>
+	<article ng-repeat="article in homeNews.main">
+		<span class="home-main-article-title">{{article.headLine}}</span>
+		<p class="home-main-snippet"><span class="home-main-location">{{article.location}}&nbsp&nbsp</span>{{article.snippet}}</p>
 	</article>
-	<article ng-repeat="article in homeNews.travel">
-		<h3>{{article.headLine}}</h3>
-		<p>{{article.snippet}}</p>
-	</article>
+</div>
+<div class="col-md-5">
+	<span class="opinion-title" style="text-align:center;display:block">The Opinion Pages</span>
+	<div class="row" style="margin-top:5px">
+		<div class="col-md-6" ng-repeat="article in homeNews.opinion">
+			<span class="opinion-article-title">{{article.headLine}}</span>
+			<p class="opinion-snippet"><span class="opinion-location">{{article.location}}&nbsp&nbsp</span>{{article.snippet}}</p>
+		</div>
+	</div>
+	<span class="travel-title">TRAVEL</span>
+	<span style="font-size:10pt;letter-spacing:-1px">
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+		<i class="fa fa-angle-right"></i>
+	</span>
+
+	<div class="row" style="margin-top:5px">
+		<div class="col-md-6" ng-repeat="article in homeNews.travel">
+			<span class="travel-article-title">{{article.headLine}}</span>
+			<p class="travel-snippet"><span class="travel-location">{{article.location}}&nbsp&nbsp</span>{{article.snippet}}</p>
+		</div>
+	</div>
 </div>

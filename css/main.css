@@ -29,6 +29,13 @@ body {
 #title {
 	font-weight: 700;
 	font-size: 36pt;
+	text-decoration: none;
+	color: #444;
+}
+
+#title:hover {
+	text-decoration: none;
+	color: #444;
 }
 
 #date {

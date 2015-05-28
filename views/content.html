@@ -4,9 +4,14 @@ $(document).ready(function() {
 	$("#world").addClass("selected-category");
 });
 </script>
+
 <div class="col-md-7">
-	{{catNews}}
+	<h3>{{catNews.main.headLine}}</h3>
+	<em>{{catNews.main.snippet}}</em>
+	<p>{{catNews.main.fullStory}}</p>
 </div>
 <div class="col-md-5">
-	{{catNews}}
+	<h3>{{catNews.aside.headLine}}</h3>
+	<em>{{catNews.aside.snippet}}</em>
+	<p>{{catNews.aside.fullStory}}</p>
 </div>

@@ -1,17 +1,14 @@
-<script>
-$(document).ready(function() {
-	$(".category").removeClass("selected-category");
-	$("#world").addClass("selected-category");
-});
-</script>
 
 <div class="col-md-7">
-	<h3>{{catNews.main.headLine}}</h3>
-	<em>{{catNews.main.snippet}}</em>
-	<p>{{catNews.main.fullStory}}</p>
+	<article class="content-separator content-format">
+		<p><span class="aside-title">{{catNews.main.headLine}}</span></p>
+		<p><em>{{catNews.main.snippet}}</em></p>
+		<p>{{catNews.main.fullStory}}</p>
+	</article> 
 </div>
 <div class="col-md-5">
-	<h3>{{catNews.aside.headLine}}</h3>
-	<em>{{catNews.aside.snippet}}</em>
-	<p>{{catNews.aside.fullStory}}</p>
+	<article>
+		<p class="content-section"><em>{{catNews.aside.headLine}}</em></p>
+		<p><span class="home-main-location content-color-change">{{catNews.aside.location}}&nbsp&nbsp</span>{{catNews.aside.fullStory}}</p>
+	</article> 
 </div>

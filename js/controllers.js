@@ -20,7 +20,8 @@ HTMLControllers.controller("TopCtrl", ["$scope", "catService", function($scope, 
 HTMLControllers.controller("HomeCtrl", ["$scope", "catService", function($scope, catService) {
 
 	catService.retrieve("articles/featured").success(function(data) {
-		$scope.homeNews = data; 
+		$scope.homeNews = data;
+		$(".category").removeClass("selected-category");
 	}).error(function(data) {
 		console.log("god help us. [HomeCtrl]");
 	});
@@ -38,6 +39,8 @@ HTMLControllers.controller("ContentCtrl", ["$scope", "$routeParams", "catService
 		catService.retrieve("category/" + $scope.catMap[$routeParams.shortName]).success(function(data) {
 			$scope.catNews = data;
 			console.log($scope.catMap[$routeParams.shortName] + " <-------- that thing");
+			$(".category").removeClass("selected-category");
+			$("#" + $routeParams.shortName).addClass("selected-category");
 		}).error(function(data){
 			console.log("god help us. [ContentCtrl catagory]");
 		});

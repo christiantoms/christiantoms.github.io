@@ -24,7 +24,7 @@
 	</article>
 </div>
 <div class="col-md-4">
-	<img src = "Black_blank.jpg" style="width:350px;height:250px;margin-bottom:20px" >
+	<img src = "Black_blank.jpg" style="width:350px;height:250px;margin-bottom:20px" class="img-responsive">
 	<article ng-repeat="article in homeNews.main">
 		<span class="home-main-article-title">{{article.headLine}}</span>
 		<p class="home-main-snippet"><span class="home-main-location">{{article.location}}&nbsp&nbsp</span>{{article.snippet}}</p>
@@ -111,7 +111,7 @@
 	<div class="row" style="margin-top:5px">
 		<div class="col-md-6" ng-repeat="article in homeNews.travel">
 			<span class="travel-article-title">{{article.headLine}}</span>
-			<span><img src = "Black_blank.jpg" style="width:200px;height:50px;margin-top:10px;margin-bottom:10px"></span>
+			<span><img src = "Black_blank.jpg" style="width:200px;height:50px;margin-top:10px;margin-bottom:10px" class="img-responsive"></span>
 			<p class="travel-snippet"><span class="travel-location">{{article.location}}&nbsp&nbsp</span>{{article.snippet}}</p>
 		</div>
 	</div>
